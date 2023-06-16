@@ -7,6 +7,20 @@
     Tip: you can create another variable as a placeholder for the sum first.
 */
 
+let gradeArray = [56, 87, 99, 40];
+gradeArray.push(68);
+gradeArray.shift();
+gradeArray[2] = 60;
+console.log(`Grade List after Modifications = ${gradeArray}`);
+let sum = 0;
+for (i in gradeArray) {
+    sum += gradeArray[i];
+}
+let average = sum / gradeArray.length;
+console.log(`Sum = ${sum}; Grade Average = ${average}`);
+
+
+
 /*Q2:
 1. Create an object called vehicle with following properties:
     a. name (String)
@@ -17,3 +31,13 @@
 Feel free to put any value.
 2. Use the for-in loop to display both the properties and values of the object.
 */
+const vehicle = {
+    name: "C 300 AMG",
+    brand: "Mercedes",
+    yearOfMake: 2022,
+    numberOfWheels: 4,
+    isEnvironmentFriendly: false
+}
+for (i in vehicle) {
+    console.log(`${i} = ${vehicle[i]}`);
+}
